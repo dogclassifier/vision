@@ -15,15 +15,15 @@ function setup(){
 
                                     w=window.innerWidth;
                                     head=20;
-                                    h=window.innerHeight/2;
+                                    h=Math.round(window.innerHeight/2);
                                                                         
                                     cnv1=createCanvas(w,h);
                                     cnv2=createCanvas(w,h);
                                     cnv1.position(0, 0, 'relative');
-                                    cnv2.position(0,h,'relative'
+                                    cnv2.position(0,h,'relative');
                                     camCapture = createCapture(options);
                                     camCapture.size(w,h);
-                                    options.hide();
+                                    camCature.hide();
                                     }
 
                                   
