@@ -23,7 +23,7 @@ function setup(){
                                     cnv2.position(0,h,'relative');
                                     camCapture = createCapture(options);
                                     camCapture.size(w,h);
-                                    camCature.hide();
+                                    camCapture.hide();
                                     }
 
                                   
