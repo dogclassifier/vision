@@ -28,6 +28,6 @@ function setup {
 
                                   
                         function draw() {
-                              cnv1=image(0,0,w,h)
+                              cnv1=image(camCapture,0,0,w,h);
                               
                         }
