@@ -1,4 +1,4 @@
-function setup {
+function setup(){
                                                       
                                     var options = {
 
@@ -23,7 +23,7 @@ function setup {
                                     cnv2.position(0,h,'relative'
                                     camCapture = createCapture(options);
                                     camCapture.size(w,h);
-                                    camCapture.hide();
+                                    options.hide();
                                     }
 
                                   
