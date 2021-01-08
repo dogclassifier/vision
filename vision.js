@@ -29,6 +29,8 @@ function setup(){
                                   
                         function draw() {
                               cnv1=image(camCapture,0,0,w,h);
+                         Let imgHuman=document.getElementById('cnv1).getContext("2d").getImageData(0,0,w, h);
+                         document.getElementById("cnv2").getContext("2d").putImageData(imgHuman,0,h);
                           
                               
                         }
