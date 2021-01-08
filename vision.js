@@ -19,8 +19,8 @@ function setup(){
                                                                         
                                     cnv1=createCanvas(w,h);
                                     cnv2=createCanvas(w,h);
-                                    cnv1.position(0, 0, 'relative');
-                                    cnv2.position(0,h,'relative');
+                                    cnv1.position(0, 0, 'fixed');
+                                    cnv2.position(0,h,'fixed');
                                     camCapture = createCapture(options);
                                     camCapture.size(w,h);
                                     camCapture.hide();
@@ -29,5 +29,6 @@ function setup(){
                                   
                         function draw() {
                               cnv1=image(camCapture,0,0,w,h);
+                          
                               
                         }
