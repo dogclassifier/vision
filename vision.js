@@ -19,6 +19,7 @@ function setup(){
   capture = createCapture(options);
   capture.size(400, 300);
   noStroke();
+}
 
 function draw() { 
   background(0);
