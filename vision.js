@@ -1,3 +1,4 @@
+var capture;
 function setup(){
                                                       
                                     var options = {
@@ -12,25 +13,25 @@ function setup(){
                                     audio: false
                                        };
 
+                                
 
-                                    w=window.innerWidth;
-                                    head=20;
-                                    h=Math.round(window.innerHeight/2);
-                                                                        
-                                    cnv1=createCanvas(w,h);
-                                    cnv2=createCanvas(w,h);
-                                    cnv1.position(0, 0, 'fixed');
-                                    cnv2.position(0,h,'fixed');
-                                    camCapture = createCapture(options);
-                                    camCapture.size(w,h);
-                                    camCapture.hide();
-                                    }
+  createCanvas(400, 400);
+  capture = createCapture(options);
+  capture.size(400, 300);
+  noStroke();
 
-                                  
-                        function draw() {
-                              cnv1=image(camCapture,0,0,w,h);
-                         Let imgHuman=document.getElementById('cnv1).getContext("2d").getImageData(0,0,w, h);
-                         document.getElementById("cnv2").getContext("2d").putImageData(imgHuman,0,h);
-                          
-                              
-                        }
+function draw() { 
+  background(0);
+  capture.loadPixels();
+  var stepSize = 4;
+  for (var x = 0; x < capture.width; x += stepSize) {
+    for (var y = 0; y < capture.height; y += stepSize) {
+      var index = ((y*capture.width) + x) * 4;
+      var redVal = capture.pixels[index];
+      var greenVal = capture.pixels[index + 1];
+      var blueVal = capture.pixels[index + 2];
+      fill(redVal, greenVal, blueVal);
+      ellipse(x, y, stepSize, stepSize);
+    }
+  }
+}
